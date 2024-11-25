@@ -1,0 +1,23 @@
+/* Variables */
+:root {
+    --secondary-color: #f9fafb; /* Blanco suave */
+    --accent-color: #f97316; /* Naranja cálido */
+    --font-main: 'Poppins', sans-serif; /* Fuente principal */
+    --font-alt: 'Roboto', sans-serif; /* Fuente secundaria */
+}
+
+/* Fuente base para todo el formulario */
+body {
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    background-color: #0f0f0f; /* Fondo oscuro */
+    color: var(--secondary-color); /* Texto claro */
+    transition: background-color 0.3s ease; /* Suaviza el cambio de fondo */
+}
+
+/* Estilos generales */
+* {
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 0; /* Elimina relleno predeterminado */
+    box-sizing: border-box; /* Hace que los bordes y el padding no afecten el ancho y alto */
+    transition: all 0.3s ease; /* Suaviza la transición de todos los elementos */
+}

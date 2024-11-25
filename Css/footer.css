@@ -1,0 +1,47 @@
+/* Footer */
+footer {
+    background-color: #060607; /* Fondo oscuro */
+    color: #fff; /* Texto blanco para contraste */
+    padding: 30px 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif; /* Fuente profesional */
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Enlaces del footer */
+footer a {
+    color: #f97316; /* Color para los enlaces */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para redes sociales */
+footer .social-icons {
+    margin-top: 20px;
+}
+
+footer .social-icons a {
+    font-size: 1.5rem;
+    margin: 0 15px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #f97316; /* Color al pasar el mouse */
+}

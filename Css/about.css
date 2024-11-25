@@ -1,0 +1,84 @@
+/* Estilo base */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background: linear-gradient(135deg, #000000 0%, #ffffff 100%); /* Fondo degradado atractivo */
+    padding: 0 1.875rem; /* 30px a rem */
+    color: var(--secondary-color);
+    overflow: hidden; /* Evita que el contenido se desborde fuera de la sección */
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 75rem; /* 1200px a rem */
+    /* Aquí nos aseguramos que el contenido se mantenga dentro del área visible */
+}
+
+/* Animación para el texto */
+.about-text {
+    max-width: 50%;
+    text-align: left;
+    margin-right: 1.875rem; /* 30px a rem */
+    font-family: 'Roboto', sans-serif; /* Tipografía elegante */
+    opacity: 0; /* Comienza invisible */
+    transform: translateX(-3.125rem); /* 50px a rem */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Animación de desvanecimiento y desplazamiento */
+}
+
+/* Título - no se cambia */
+.about-text h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 0.125rem; /* 2px a rem */
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    margin-bottom: 1.25rem; /* 20px a rem */
+    border-bottom: 0.1875rem solid var(--accent-color); /* 3px a rem */
+    padding-bottom: 0.625rem; /* 10px a rem */
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--secondary-color);
+    margin-top: 1.25rem; /* 20px a rem */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Animación para la imagen */
+.about-img {
+    max-width: 40%;
+    text-align: center;
+    overflow: hidden; /* Evita que la imagen se desborde */
+    opacity: 0; /* Comienza invisible */
+    transform: translateX(3.125rem); /* 50px a rem */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Animación de desvanecimiento y desplazamiento */
+}
+
+/* Animación para la imagen cuando se pasa el cursor */
+.about-img-content {
+    width: 100%;
+    height: auto;
+    border-radius: 0.9375rem; /* 15px a rem */
+    box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.1); /* Sombra suave para la imagen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-img-content:hover {
+    transform: scale(1.05); /* Efecto de zoom suave */
+    box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al hacer hover */
+}
+
+/* Estilo visible para cuando los elementos se encuentren dentro de la vista */
+.about-text.visible,
+.about-img.visible {
+    opacity: 1;
+    transform: translateX(0); /* Restablece la posición original */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Animación suave de entrada */
+}
+

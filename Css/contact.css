@@ -1,0 +1,151 @@
+/* Estilo de la sección de contacto */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background: #0f0f0f;
+    padding: 0 1.875rem; /* 30px a rem */
+    color: var(--secondary-color);
+    opacity: 0; /* Inicia oculta */
+    transform: translateY(1.875rem); /* 30px a rem */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Clase que se activa cuando la sección es visible */
+.contact.show {
+    opacity: 1;
+    transform: translateY(0); /* Vuelve a su posición original */
+}
+
+/* Resto de tu CSS */
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    max-width: 50rem; /* 800px a rem */
+    text-align: left;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 0.125rem; /* 2px a rem */
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    margin-bottom: 3.125rem; /* 50px a rem */
+    border-bottom: 0.1875rem solid var(--accent-color); /* 3px a rem */
+    padding-bottom: 0.625rem; /* 10px a rem */
+}
+
+form {
+    width: 100%;
+    background-color: #fff;
+    padding: 2.5rem; /* 40px a rem */
+    border-radius: 0.9375rem; /* 15px a rem */
+    box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.1); /* 10px 30px a rem */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos de grupos de formulario */
+.form-group {
+    margin-bottom: 1.25rem; /* 20px a rem */
+}
+
+.form-group label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.625rem; /* 10px a rem */
+    color: #333;
+    display: block;
+}
+
+/* Estilos de input y textarea */
+.form-group input,
+.form-group textarea {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    padding: 0.75rem; /* 12px a rem */
+    font-size: 1rem;
+    color: #333;
+    border: 0.0625rem solid #ccc; /* 1px a rem */
+    border-radius: 0.3125rem; /* 5px a rem */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo para cuando el campo recibe foco */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #f97316;
+    outline: none;
+    box-shadow: 0 0 0.3125rem rgba(249, 115, 22, 0.5); /* 5px a rem */
+}
+
+/* Estilo del texto del placeholder */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    color: #999;
+}
+
+/* Hacer que el textarea se pueda redimensionar */
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Estilos para el botón de enviar */
+button[type="submit"] {
+    background-color: #f97316;
+    color: #fff;
+    padding: 0.9375rem 1.5625rem; /* 15px 25px a rem */
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.3125rem; /* 5px a rem */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #d55b14;
+    transform: scale(1.05);
+}
+
+/* Estilos para validación de campos */
+.form-group input:valid,
+.form-group textarea:valid {
+    border-color: #4CAF50; /* Verde para campos válidos */
+}
+
+.form-group input:invalid,
+.form-group textarea:invalid {
+    border-color: #f44336; /* Rojo para campos inválidos */
+}
+
+.form-group input:invalid:focus,
+.form-group textarea:invalid:focus {
+    box-shadow: 0 0 0.3125rem rgba(244, 67, 54, 0.5); /* 5px a rem */
+}
+
+.form-group input:valid:focus,
+.form-group textarea:valid:focus {
+    box-shadow: 0 0 0.3125rem rgba(76, 175, 80, 0.5); /* 5px a rem */
+}
+
+/* Estilo para los mensajes de error debajo de los campos */
+.form-group input:invalid:after,
+.form-group textarea:invalid:after {
+    content: 'Por favor, ingresa un valor válido.';
+    color: #f44336;
+    font-size: 0.9rem;
+    margin-top: 0.3125rem; /* 5px a rem */
+    display: block;
+}
+
