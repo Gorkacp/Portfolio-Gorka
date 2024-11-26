@@ -4,16 +4,16 @@
     align-items: center;
     min-height: 100vh; /* Ocupa toda la pantalla */
     background: linear-gradient(135deg, #000000 0%, #ffffff 100%);
-    padding: 50px 30px;
+    padding: 3.125rem 1.875rem; /* 50px 30px */
     color: var(--secondary-color);
-    opacity: 0;  /* Inicia oculta */
-    transform: translateY(20px);  /* Desplazada hacia abajo */
-    transition: opacity 1s ease, transform 1s ease;  /* Transición suave para aparecer */
+    opacity: 0; /* Inicia oculta */
+    transform: translateY(1.25rem); /* 20px */
+    transition: opacity 1s ease, transform 1s ease; /* Transición suave para aparecer */
 }
 
 .services.show {
     opacity: 1;
-    transform: translateY(0);  /* Vuelve a su posición original */
+    transform: translateY(0); /* Vuelve a su posición original */
 }
 
 .services-content {
@@ -22,19 +22,19 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 75rem; /* 1200px */
     text-align: center;
 }
 
 .section-title {
     font-size: 3.5rem;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem; /* 2px */
     color: var(--secondary-color);
     text-transform: uppercase;
-    margin-bottom: 50px;
-    border-bottom: 3px solid var(--accent-color);
-    padding-bottom: 10px;
+    margin-bottom: 3.125rem; /* 50px */
+    border-bottom: 0.1875rem solid var(--accent-color); /* 3px */
+    padding-bottom: 0.625rem; /* 10px */
 }
 
 .services-list {
@@ -43,26 +43,26 @@
     align-items: flex-start;
     width: 100%;
     flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 20px;
+    gap: 1.25rem; /* 20px */
+    margin-top: 1.25rem; /* 20px */
 }
 
 /* Animación para las tarjetas de servicios */
 .service-card {
     background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    width: calc(33.333% - 20px);
-    padding: 20px;
+    border-radius: 0.9375rem; /* 15px */
+    box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.1); /* 10px 30px */
+    width: calc(33.333% - 1.25rem); /* 20px */
+    padding: 1.25rem; /* 20px */
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 250px;
-    max-height: 350px;
+    min-height: 15.625rem; /* 250px */
+    max-height: 21.875rem; /* 350px */
     opacity: 0; /* Inicia oculta */
-    transform: translateY(30px); /* Desplazada hacia abajo */
+    transform: translateY(1.875rem); /* 30px */
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
@@ -73,19 +73,19 @@
 
 .service-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.2); /* 20px 40px */
 }
 
 .service-card i {
     font-size: 3rem;
     color: var(--accent-color);
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem; /* 10px */
 }
 
 .service-card h3 {
     font-size: 1.6rem;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem; /* 10px */
     color: #1a1919;
 }
 
@@ -96,20 +96,20 @@
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 48rem) { /* 768px */
     .services {
-        padding: 20px 15px;
+        padding: 1.25rem 0.9375rem; /* 20px 15px */
     }
 
     .services-list {
-        gap: 15px;
+        gap: 0.9375rem; /* 15px */
     }
 
     .service-card {
-        width: calc(50% - 15px);
-        min-height: 200px;
-        max-height: 280px;
-        padding: 15px;
+        width: calc(50% - 0.9375rem); /* 15px */
+        min-height: 12.5rem; /* 200px */
+        max-height: 17.5rem; /* 280px */
+        padding: 0.9375rem; /* 15px */
     }
 
     .service-card h3 {
@@ -121,11 +121,11 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30rem) { /* 480px */
     .service-card {
         width: 100%;
-        min-height: 180px;
-        padding: 10px;
+        min-height: 11.25rem; /* 180px */
+        padding: 0.625rem; /* 10px */
     }
 
     .service-card h3 {
@@ -136,3 +136,4 @@
         font-size: 0.8rem;
     }
 }
+

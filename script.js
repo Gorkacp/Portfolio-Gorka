@@ -1,3 +1,4 @@
+//Animacion para menu amburguesa
 const menuIcon = document.querySelector('.menu-icon');
 const navbar = document.querySelector('.nav-links');
 const header = document.querySelector('header');

@@ -3,7 +3,7 @@
     justify-content: flex-start; /* Alinea el contenido a la izquierda */
     align-items: center; /* Alinea los elementos verticalmente */
     height: 100vh; /* Altura completa de la pantalla */
-    padding: 20px; /* Espaciado dentro de la sección */
+    padding: 1.25rem; /* 20px */
     background-image: url('../imagenes/Hero.jpg'); /* Imagen de fondo */
     background-size: cover; /* Hace que la imagen cubra toda la sección */
     background-position: center; /* Centra la imagen */
@@ -17,43 +17,72 @@
 }
 
 .hero-content h1 {
-    font-size: 4rem; /* Tamaño grande para el título */
-    margin-bottom: 10px; /* Espacio debajo del título */
+    font-size: 4rem; /* 64px */
+    margin-bottom: 0.625rem; /* 10px */
     animation: fadeInUp 1s ease-out; /* Animación de aparición */
 }
 
 .hero-content p {
-    font-size: 1.8rem; /* Tamaño de fuente más grande para el párrafo */
-    margin-bottom: 20px; /* Espacio debajo del párrafo */
+    font-size: 1.8rem; /* 28.8px */
+    margin-bottom: 1.25rem; /* 20px */
     animation: fadeInUp 1.5s ease-out; /* Animación de aparición con retraso */
 }
 
 .hero-content .biography {
-    font-size: 1.4rem; /* Tamaño de fuente para la biografía */
-    margin-bottom: 20px; /* Espacio debajo de la biografía */
+    font-size: 1.4rem; /* 22.4px */
+    margin-bottom: 1.25rem; /* 20px */
     animation: fadeInUp 2s ease-out; /* Animación de aparición más lenta */
 }
 
+/* Botón GitHub */
 .hero .btn {
+    position: relative; /* Para usar efectos con pseudo-elementos */
+    display: inline-block;
     background-color: var(--accent-color); /* Fondo naranja del botón */
     color: var(--secondary-color); /* Color del texto del botón */
     text-decoration: none; /* Elimina subrayado */
-    padding: 12px 25px; /* Relleno dentro del botón */
-    border-radius: 5px; /* Bordes redondeados */
+    padding: 0.75rem 1.5625rem; /* 12px 25px */
+    border-radius: 0.3125rem; /* 5px */
     font-weight: 600; /* Grosor de la fuente */
-    transition: background-color 0.3s ease; /* Transición suave para el color */
+    overflow: hidden; /* Para los efectos con pseudo-elementos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1; /* Asegura que el contenido esté delante del pseudo-elemento */
+}
+
+/* Efecto al pasar el ratón */
+.hero .btn:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Agrega profundidad */
+}
+
+/* Efecto al hacer clic */
+.hero .btn:active {
+    transform: scale(0.95); /* Simula el pulsado */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto adicional con pseudo-elemento */
+.hero .btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Efecto brillo */
+    opacity: 0;
+    z-index: -1; /* Detrás del texto */
+    transition: opacity 0.3s ease;
+}
+
+.hero .btn:hover::after {
+    opacity: 1; /* Muestra el brillo al pasar el ratón */
 }
 
 /* Animación para el texto de la sección Hero */
 @keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(20px); }
+    0% { opacity: 0; transform: translateY(1.25rem); } /* 20px */
     100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Animación de pulsación de botones */
-.hero .btn:hover {
-    background-color: var(--accent-color);
-    animation: pulse 0.8s infinite alternate; /* Pulsación del botón */
 }
 
 /*Desplazamiento para header*/
